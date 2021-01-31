@@ -126,7 +126,7 @@ public class Player_Controler : MonoBehaviour
 
         if(rigid.velocity.x > 0)
         {
-            hands.transform.position = new Vector3(transform.position.x + 1.5f, transform.position.y, transform.position.z);
+            hands.transform.position = new Vector3(transform.position.x + 2f, transform.position.y, transform.position.z);
             playerAnim.SetBool("side", true);
             playerAnim.SetBool("up", false);
             playerAnim.SetBool("down", false);
@@ -134,7 +134,7 @@ public class Player_Controler : MonoBehaviour
 
         if (rigid.velocity.y > 0)
         {
-            hands.transform.position = new Vector3(transform.position.x , transform.position.y + 1.5f, transform.position.z);
+            hands.transform.position = new Vector3(transform.position.x , transform.position.y + 2f, transform.position.z);
             playerAnim.SetBool("side", false);
             playerAnim.SetBool("up", true);
             playerAnim.SetBool("down", false);
@@ -142,7 +142,7 @@ public class Player_Controler : MonoBehaviour
 
         if (rigid.velocity.y < 0)
         {
-            hands.transform.position = new Vector3(transform.position.x, transform.position.y - 1.5f, transform.position.z);
+            hands.transform.position = new Vector3(transform.position.x, transform.position.y - 2f, transform.position.z);
             playerAnim.SetBool("side",false);
             playerAnim.SetBool("up", false);
             playerAnim.SetBool("down", true);
@@ -158,29 +158,29 @@ public class Player_Controler : MonoBehaviour
 
             NewFreind.transform.parent = null;
 
-            if (hands.transform.position.x == transform.position.x + 1.5)
+            if (hands.transform.position.x == transform.position.x + 2f)
             {
-                newplace = new Vector3(NewFreind.transform.position.x + 5, NewFreind.transform.position.y - 5 , 10);
+                newplace = new Vector3(NewFreind.transform.position.x + 5, transform.position.y - 5f , 10);
                 
                 
             }
 
-            if (hands.transform.position.x == transform.position.x - 1.5)
+            if (hands.transform.position.x == transform.position.x - 2f)
             {
-                newplace = new Vector3(NewFreind.transform.position.x - 5, NewFreind.transform.position.y - 5, 10);
+                newplace = new Vector3(NewFreind.transform.position.x - 5, transform.position.y - 5f, 10);
                 
                 
             }
 
-            if (hands.transform.position.y == transform.position.y + 1.5)
+            if (hands.transform.position.y == transform.position.y + 2f)
             {
-                newplace = new Vector3(NewFreind.transform.position.x , NewFreind.transform.position.y + 5, 10);
+                newplace = new Vector3(NewFreind.transform.position.x , transform.position.y + 10f, 10);
                  
             }
 
-            if (hands.transform.position.y == transform.position.y - 1.5)
+            if (hands.transform.position.y == transform.position.y - 2f)
             {
-                newplace = new Vector3(NewFreind.transform.position.x, NewFreind.transform.position.y - 10, 10);
+                newplace = new Vector3(NewFreind.transform.position.x, transform.position.y - 15f, 10);
                 
             }
 
